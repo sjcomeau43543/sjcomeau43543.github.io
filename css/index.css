@@ -28,15 +28,18 @@
 h1 {
   font-size: 12px;
 }
+
+img {
+  width: 275px;
+}
+
 .project_div {
   float: left;
   background-color: #2196F3;
   color: #ffffff;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 2px;
+  width: 280px;
   display: none;
+  margin: 10px;
 }
 
 .show {
