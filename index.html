@@ -7,36 +7,14 @@
 
 
 <body>
-
+<div class="toolbarContainer">
   
-<h2>Filter By Project Tag</h2>
-
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('binary_analysis')"> Binary Analysis</button>
-  <button class="btn" onclick="filterSelection('embedded_systems')"> Embedded Systems</button>
-  <button class="btn" onclick="filterSelection('research')"> Research </button>
-  <button class="btn" onclick="filterSelection('publications')"> Publications </button>
-</div>
-
-
-<div class="filterContainer">
-    <h2>Projects</h2>
-    <div class="project_div binary_analysis research publications" onclick="loadPage('projects/SymbolicExecutionForFunctionMatching/index.html')">
-      <h1>Symbolic Execution for Function Matching ***</h1>
-      <img src="projects/SymbolicExecutionForFunctionMatching/home.png">
-    
-    </div>
-    <div class="project_div research publications" onclick="loadPage('projects/UsingDataVisToCommPlasticPoll/index.html')">
-      <h1>Using Data Visualisation to Communicate the Sources of Plastic Pollutants in Port Phillip Bay ***</h1>
-      <img src="projects/UsingDataVisToCommPlasticPoll/home.JPG">
-    </div>
-    <div class="project_div" onclick="loadPage('projects/HospitalKiosk/index.html')">
-      <h1>Hospital Kiosk</h1>
-      <img src="projects/HospitalKiosk/home.JPG">
-    
-    </div>
-</div>
+  <h1 class="toolbar" onclick="loadPage('index.html')">Home</h1>
+  <h1 class="toolbar" onclick="loadPage('')">Experience</h1>
+  <h1 class="toolbar" onclick="loadPage('projects.html')">Projects</h1>
+  <h1 class="toolbar" onclick="loadPage('')">Organizations</h1>
+  <h1 class="toolbar" onclick="loadPage('')">Passions</h1>
+</div><br><br>
 
 </body>
   
@@ -45,51 +23,6 @@
 function loadPage(page) {
   window.location.href = page;
 
-}
-
-// w3
-
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("project_div");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
 }
 </script>
 </html>
