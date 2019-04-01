@@ -5,6 +5,42 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 
+
+<body>
+
+  
+<h2>Filter By Project Tag</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('binary_analysis')"> Binary Analysis</button>
+  <button class="btn" onclick="filterSelection('embedded_systems')"> Embedded Systems</button>
+  <button class="btn" onclick="filterSelection('research')"> Research </button>
+  <button class="btn" onclick="filterSelection('publications')"> Publications </button>
+</div>
+
+
+<div class="filterContainer">
+    <h2>Projects</h2>
+    <div class="project_div binary_analysis research publications" onclick="loadPage('projects/SymbolicExecutionForFunctionMatching/index.html')">
+      <h1>Symbolic Execution for Function Matching ***</h1>
+      <img src="projects/SymbolicExecutionForFunctionMatching/home.png">
+    
+    </div>
+    <div class="project_div research publications" onclick="loadPage('projects/UsingDataVisToCommPlasticPoll/index.html')">
+      <h1>Using Data Visualisation to Communicate the Sources of Plastic Pollutants in Port Phillip Bay ***</h1>
+      <img src="projects/UsingDataVisToCommPlasticPoll/home.JPG">
+    </div>
+    <div class="project_div" onclick="loadPage('projects/HospitalKiosk/index.html')">
+      <h1>Hospital Kiosk</h1>
+      <img src="projects/HospitalKiosk/home.JPG">
+    
+    </div>
+</div>
+
+</body>
+  
+  
 <script>
 function loadPage(page) {
   window.location.href = page;
@@ -56,38 +92,4 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-
-<body>
-
-  
-<h2>Filter By Project Tag</h2>
-
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('binary_analysis')"> Binary Analysis</button>
-  <button class="btn" onclick="filterSelection('embedded_systems')"> Embedded Systems</button>
-  <button class="btn" onclick="filterSelection('research')"> Research </button>
-  <button class="btn" onclick="filterSelection('publications')"> Publications </button>
-</div>
-
-
-<div class="filterContainer">
-    <h2>Projects</h2>
-    <div class="project_div binary_analysis research publications" onclick="loadPage('SymbolicExecutionForFunctionMatching/index.html')">
-      <h1>Symbolic Execution for Function Matching ***</h1>
-      <img src="SymbolicExecutionForFunctionMatching/home.png">
-    
-    </div>
-    <div class="project_div research publications" onclick="loadPage('UsingDataVisToCommPlasticPoll/index.html')">
-      <h1>Using Data Visualisation to Communicate the Sources of Plastic Pollutants in Port Phillip Bay ***</h1>
-      <img src="UsingDataVisToCommPlasticPoll/home.JPG">
-    </div>
-    <div class="project_div" onclick="loadPage('HospitalKiosk/index.html')">
-      <h1>Hospital Kiosk</h1>
-      <img src="HospitalKiosk/home.JPG">
-    
-    </div>
-</div>
-
-</body>
 </html>
