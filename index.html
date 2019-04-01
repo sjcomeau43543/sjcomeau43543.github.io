@@ -16,7 +16,7 @@ function loadPage(page) {
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
-  x = document.getElementsByClassName("filterDiv");
+  x = document.getElementsByClassName("project_div");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
@@ -59,27 +59,26 @@ for (var i = 0; i < btns.length; i++) {
 
 <body>
 
+  
+<h2>Filter By Project Tag</h2>
+
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('binary_analysis')"> binary_analysis</button>
-  <button class="btn" onclick="filterSelection('embedded_systems')"> embedded_systems</button>
-  <button class="btn" onclick="filterSelection('research')"> research</button>
-  <button class="btn" onclick="filterSelection('publications')"> publications</button>
-  <button class="btn" onclick="filterSelection('sustainability')"> sustainability</button>
-  <button class="btn" onclick="filterSelection('group_work')"> group_work</button>
+  <button class="btn" onclick="filterSelection('binary_analysis')"> Binary Analysis</button>
+  <button class="btn" onclick="filterSelection('embedded_systems')"> Embedded Systems</button>
+  <button class="btn" onclick="filterSelection('research')"> Research </button>
+  <button class="btn" onclick="filterSelection('publications')"> Publications </button>
 </div>
 
-<h2>Three Equal Columns</h2>
 
-<div class="row">
-  <div class="column">
+<div class="filterContainer">
     <h2>Projects</h2>
-    <div class="project_div" onclick="loadPage('SymbolicExecutionForFunctionMatching/index.html')">
+    <div class="project_div binary_analysis research publications" onclick="loadPage('SymbolicExecutionForFunctionMatching/index.html')">
       <h1>Symbolic Execution for Function Matching ***</h1>
       <img src="SymbolicExecutionForFunctionMatching/home.png">
     
     </div>
-    <div class="project_div" onclick="loadPage('UsingDataVisToCommPlasticPoll/index.html')">
+    <div class="project_div research publications" onclick="loadPage('UsingDataVisToCommPlasticPoll/index.html')">
       <h1>Using Data Visualisation to Communicate the Sources of Plastic Pollutants in Port Phillip Bay ***</h1>
       <img src="UsingDataVisToCommPlasticPoll/home.JPG">
     </div>
@@ -88,15 +87,6 @@ for (var i = 0; i < btns.length; i++) {
       <img src="HospitalKiosk/home.JPG">
     
     </div>
-  </div>
-  <div class="column">
-    <h2>Column 2</h2>
-    <div class="project_div"><h1>ColInsert</h1></div>
-  </div>
-  <div class="column">
-    <h2>Column 3</h2>
-    <div class="project_div"><h1>ColInsert</h1></div>
-  </div>
 </div>
 
 </body>
