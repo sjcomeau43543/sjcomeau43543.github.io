@@ -28,11 +28,14 @@
 h1 {
   font-size: 12px;
 }
-
-.projectDiv {
+.project_div {
   float: left;
   background-color: #2196F3;
   color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
   display: none;
 }
 
@@ -40,10 +43,6 @@ h1 {
   display: block;
 }
 
-.container {
-  margin-top: 20px;
-  overflow: hidden;
-}
 
 /* Style the buttons */
 .btn {
@@ -62,5 +61,4 @@ h1 {
   background-color: #666;
   color: white;
 }
-
 </style>
