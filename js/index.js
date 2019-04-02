@@ -3,7 +3,7 @@
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
-  x = document.getElementsByClassName("project_div");
+  x = document.getElementsByClassName("projectDiv");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
@@ -35,12 +35,14 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
+var mainContainer = document.getElementById("mainContainer");
+var btnContainer = document.getElementsByClassName("myBtnContainer");
+var btns = btnContainer[0].getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
+    console.log(this.className);
   });
 }

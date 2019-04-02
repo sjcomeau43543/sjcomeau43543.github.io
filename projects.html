@@ -3,84 +3,84 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/index.css">
-  
 </head>
+
+
 <body>
 <div class="toolbarContainer">
-  
-  <h1 class="toolbar" onclick="loadPage('index.html')">Home</h1>
-  <h1 class="toolbar" onclick="loadPage('experience.html')">Experience</h1>
-  <h1 class="toolbar" onclick="loadPage('projects.html')">Projects</h1>
-  <h1 class="toolbar" onclick="loadPage('organizations.html')">Organizations</h1>
-  <h1 class="toolbar" onclick="loadPage('passions.html')">Passions</h1>
+  <h1 class="header">SAMANTHA COMEAU</h1>
+  <div class="toolbarInnerContainer">
+    <h1 class="toolbar" onclick="loadPage('index.html')">HOME</h1>
+    <h1 class="toolbar" onclick="loadPage('projects.html')">PROJECTS</h1>
+    <h1 class="toolbar" onclick="loadPage('passions.html')">ABOUT</h1>
+  </div>
 </div><br><br>
 
+<div class="mainContainer">
+  <h1 class="header">PROJECTS</h1>
 
+  <h2 class="header2">Filter by Project Tag</h2>
+  <div class="myBtnContainer">
+	  <button class="btn active" onclick="filterSelection('all')">Show all</button>
+	  <button class="btn" onclick="filterSelection('binary_analysis')">Binary Analysis</button>
+	  <button class="btn" onclick="filterSelection('embedded_systems')">Embedded Systems</button>
+	  <button class="btn" onclick="filterSelection('distributed_systems')">Distributed Systems</button>
+	  <button class="btn" onclick="filterSelection('serverless_computing')">Serverless Computing</button>
+	  <button class="btn" onclick="filterSelection('research')">Research </button>
+	  <button class="btn" onclick="filterSelection('publications')">Publications </button>
+	</div> 
 
-<h3>Filter By Project Tag</h3>
+  <div class="filterContainer">
+    <div class="projectDiv binary_analysis research publications" onclick="loadPage('projects/SymbolicExecutionForFunctionMatching/index.html')">       
+      <h3 class="projectTitles">Symbolic Execution for Function Matching</h1>
+      <img class="projectImages" src="projects/SymbolicExecutionForFunctionMatching/home.png">
+    </div>
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')">Show all</button>
-  <button class="btn" onclick="filterSelection('binary_analysis')">Binary Analysis</button>
-  <button class="btn" onclick="filterSelection('embedded_systems')">Embedded Systems</button>
-  <button class="btn" onclick="filterSelection('distributed_systems')">Distributed Systems</button>
-  <button class="btn" onclick="filterSelection('serverless_computing')">Serverless Computing</button>
-  <button class="btn" onclick="filterSelection('research')">Research </button>
-  <button class="btn" onclick="filterSelection('publications')">Publications </button>
-</div> 
+	  <div class="projectDiv research publications" onclick="loadPage('projects/UsingDataVisToCommPlasticPoll/index.html')">
+	    <h3 class="projectTitles">Using Data Visualisation to Communicate the Sources of Plastic Pollutants in Port Phillip Bay</h1>
+	    <img class="projectImages" src="projects/UsingDataVisToCommPlasticPoll/home.JPG">
+	  </div>
 
-<div class="filterContainer">
+	  <div class="projectDiv" onclick="loadPage('projects/HospitalKiosk/index.html')">
+	    <h3 class="projectTitles">Hospital Kiosk</h1>
+	    <img class="projectImages" src="projects/HospitalKiosk/home.JPG">
+	  </div>
 
-    <h2>Projects</h2>
+	  <div class="projectDiv research embedded_systems distributed_systems serverless_computing">
+	    <h1>Containerized Home Automation System</h1>
 
+	  </div>
+	  <div class="projectDiv research">
+	    <h1>Docker Networks</h1>
 
-<div class="project_div binary_analysis research publications" onclick="loadPage('projects/SymbolicExecutionForFunctionMatching/index.html')">
-  <h1>Symbolic Execution for Function Matching</h1>
-  <img src="projects/SymbolicExecutionForFunctionMatching/home.png">
+	  </div>
+
+	  <div class="projectDiv embedded_systems">
+	    <h1>Oscilliscope</h1>
+
+	  </div>
+	  <div class="projectDiv research publications">
+	    <h1>Safety Technology</h1>
+
+	  </div>
+	  <div class="projectDiv research embedded_systems serverless_computing">
+	    <h1>RF Emitter</h1>
+
+	  </div>
+
+	  <div class="projectDiv">
+	    <h1>World Happiness Campaign</h1>
+
+	  </div>
+
+	  <div class="projectDiv publications">
+	    <h1>MITRE / WPI Collaboration on Cryptography Course</h1>
+
+	  </div>
+	</div>
+
 
 </div>
-<div class="project_div research publications" onclick="loadPage('projects/UsingDataVisToCommPlasticPoll/index.html')">
-  <h1>Using Data Visualisation to Communicate the Sources of Plastic Pollutants in Port Phillip Bay</h1>
-  <img src="projects/UsingDataVisToCommPlasticPoll/home.JPG">
-</div>
-<div class="project_div" onclick="loadPage('projects/HospitalKiosk/index.html')">
-  <h1>Hospital Kiosk</h1>
-  <img src="projects/HospitalKiosk/home.JPG">
-
-</div>
-<div class="project_div research embedded_systems distributed_systems serverless_computing">
-  <h1>Containerized Home Automation System</h1>
-
-</div>
-<div class="project_div research">
-  <h1>Docker Networks</h1>
-
-</div>
-
-<div class="project_div embedded_systems">
-  <h1>Oscilliscope</h1>
-
-</div>
-<div class="project_div research publications">
-  <h1>Safety Technology</h1>
-
-</div>
-<div class="project_div research embedded_systems serverless_computing">
-  <h1>RF Emitter</h1>
-
-</div>
-
-<div class="project_div">
-  <h1>World Happiness Campaign</h1>
-
-</div>
-
-<div class="project_div publications">
-  <h1>MITRE / WPI Collaboration on Cryptography Course</h1>
-
-</div>
-</div>
-
 </body>
   
 <script src="js/index.js"></script>

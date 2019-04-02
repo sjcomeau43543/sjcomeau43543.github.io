@@ -8,32 +8,86 @@
 
 <body>
 <div class="toolbarContainer">
-  
-  <h1 class="toolbar" onclick="loadPage('index.html')">Home</h1>
-  <h1 class="toolbar" onclick="loadPage('experience.html')">Experience</h1>
-  <h1 class="toolbar" onclick="loadPage('projects.html')">Projects</h1>
-  <h1 class="toolbar" onclick="loadPage('organizations.html')">Organizations</h1>
-  <h1 class="toolbar" onclick="loadPage('passions.html')">Passions</h1>
+  <h1 class="header">SAMANTHA COMEAU</h1>
+  <div class="toolbarInnerContainer">
+    <h1 class="toolbar" onclick="loadPage('index.html')">HOME</h1>
+    <h1 class="toolbar" onclick="loadPage('projects.html')">PROJECTS</h1>
+    <h1 class="toolbar" onclick="loadPage('passions.html')">ABOUT</h1>
+  </div>
 </div><br><br>
 
-<h2> Home </h2>
+<div class="mainContainer">
+  <h1 class="header">HOME</h1>
+  <p id="intro">Hello! Welcome to my personal website / portfolio. I'm <b>Samantha</b> and I'm currently a graduate student at Worcester Polytechnic Institute studying <b>Computer Science, Computer Security, and Embedded System Design</b>. In my free time I volunteer, do personal projects, and travel.</p>
 
-<h2> About Me </h2>
+  <div class="socialMediaIconsContainer">
+    <a href="https://www.facebook.com/sam.comeau.12"><img class="socialMediaIcons" src='home/facebook.png'></a>
+    <a href="https://www.twitter.com/SamComeau1"><img class="socialMediaIcons" src='home/twitter.png'></a>
+    <a href="https://www.github.com/sjcomeau43543"><img class="socialMediaIcons" src='home/github.png'></a>
+    <a href="https://www.linkedin.com/in/sjcomeau/"><img class="socialMediaIcons" src='home/linkedin.png'></a>
+  </div>
 
-<img src='home/ProfessionalPhoto.jpeg'>
+  <h1 class="header"><a href="">RESUME</a></h1>
 
-<h2> Education </h2>
+  <h2 class="header2">EDUCATION</h2>
 
-<h3> M.S Computer Science w/ Concentration in Computer Security </h3>
-<p> Worcester Polytechnic Institute </p>
-<p> Graduating: May 2020 </p>
+  <div class="homeContainer">
+    <h3> M.S Computer Science w/ Concentration in Computer Security </h3>
+    <p> Worcester Polytechnic Institute </p>
+    <p> Graduating: May 2020 </p>
+  </div>
+  <div class="homeContainer">
+    <h3> B.S Computer Science / Minor Electrical and Computer Engineering </h3>
+    <p> Worcester Polytechnic Institute </p>
+    <p> Graduated: May 2019 </p>
+  </div>
 
-<h3> B.S Computer Science / Minor Electrical and Computer Engineering </h3>
-<p> Worcester Polytechnic Institute </p>
-<p> Graduated: May 2019 </p>
+  <h2 class="header2">EXPERIENCE</h2>
+
+  <div class="homeContainer">
+    <h3> Cyber Intern </h3>
+    <p> MITRE </p>
+    <p> Summer of 2018 </p>
+    <p style="text-align: center;">#reverseengineering #embeddedsystems</p>
+  </div>
+
+  <div class="homeContainer hasLink" onclick="loadPage('projects/SymbolicExecutionForFunctionMatching/index.html')">
+    <h3> Cyber Intern </h3>
+    <p> MITRE </p>
+    <p> Summer of 2017 </p>
+    <p style="text-align: center;">#binaryanalysis #reverseengineering #symbolicexecution</p>
+  </div>
+
+  <div class="homeContainer">
+    <h3> Senior Information Security Assistant </h3>
+    <p> Worcester Polytechnic Institute, Information Security </p>
+    <p> Current </p>
+    <p style="text-align: center;">#penetrationtesting #projectdevelopment #leadership</p>
+  </div>
+  
+  <h2 class="header2">INVOLVEMENT</h2>
+
+  <div class="homeContainer">
+    <h3> WPI SMART </h3>
+    <p> Worcester Polytechnic Institute </p>
+    <p> Founder, President, VP Operations, VP Community Outreach </p>
+  </div>
+
+  <div class="homeContainer">
+    <h3> Alpha Phi International Women's Fraternity </h3>
+    <p> Worcester Polytechnic Institute </p>
+    <p> Director of Target Membership Marketing, Marshall </p>
+  </div>
+
+  <div class="homeContainer">
+    <h3> CyberSecurity Club </h3>
+    <p> Worcester Polytechnic Institute </p>
+  </div>
+
+  <!--<img src='home/ProfessionalPhoto.jpeg'>-->
 
 
-
+</div>
 </body>
   
   
