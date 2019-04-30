@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
-<body>
 
-  
-  <h2> Hospital Kiosk </h2>
-  <h3> Description </h3>
+
+<body>
+<div class="toolbarContainer">
+  <h1 class="header">SAMANTHA COMEAU</h1>
+  <div class="toolbarInnerContainer">
+    <h1 class="toolbar" onclick="loadPage('/index.html')">HOME</h1>
+    <h1 class="toolbar" onclick="loadPage('/projects.html')">PROJECTS</h1>
+    <h1 class="toolbar" onclick="loadPage('/passions.html')">ABOUT</h1>
+  </div>
+</div><br><br>
+
+<div class="mainContainer">
+  <h1 class="header">Hospital Kiosk Navigation Software</h1>
+  <h2 class="header2">DESCRIPTION</h2>
   <p> Software Engineering is a course at WPI that focuses on building Computer Science students' teamwork skills while teaching them 
     Agile software development techniques. Our team had 8 people on them and my role within this team was Lead Software Engineer, 
     which means I coordinated tasks with the other software engineers, performed code reviews, assisted with training other team members, 
     and took responsibility for any loose ends that may need to be fixed for deliverables. Alongside these responsibilities, I also 
     lead and scheduled Scrum meetings and set weekly goals for our team's sprints. Our team was the winning team during our section of 
     Software Engineering, meaning we produced the best navigation kiosk application for a hospital in the opinion of the professor, TA's,
-    and employees from the hospital. </p>
+    and employees from the hospital.  </p>
 
-</body>
+</body>  
+
+<script>
+function loadPage(page) {
+  window.location.href = page;
+
+}
+</script>
 </html>

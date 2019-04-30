@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
+
+
 <body>
+<div class="toolbarContainer">
+  <h1 class="header">SAMANTHA COMEAU</h1>
+  <div class="toolbarInnerContainer">
+    <h1 class="toolbar" onclick="loadPage('/index.html')">HOME</h1>
+    <h1 class="toolbar" onclick="loadPage('/projects.html')">PROJECTS</h1>
+    <h1 class="toolbar" onclick="loadPage('/passions.html')">ABOUT</h1>
+  </div>
+</div><br><br>
 
-<h2>Symbolic Execution for Function Matching ***</h2>
-
-<h3> Description </h3>
+<div class="mainContainer">
+  <h1 class="header">Symbolic Execution for Function Matching</h1>
+  <h2 class="header2">DESCRIPTION</h2>
   <p> This was a part of WPI's Major Qualifying Project, a project focusing on conducting research specific to the student's degree. 
     The main goal of this project is for a student to support a company, in this case MITRE, or a professor in their research efforts. 
     For this project, I worked on my own, with help from employees at MITRE to research the potential for symbolic execution to 
     benefit an ongoing project that attempts to minimize reverse engineering efforts on malware / ransomware by automatically detecting 
     matches between functions of previously reversed binaries, to newly found binaries that need to be analyzed. </p>
-  <h3>Abstract</h3>
+  <h2 class="header2">ABSTRACT</h2>
   <p>The idea for this project was to use symbolic execution to create an architecture-agnostic representation of a function 
     to use for function matching.  We were motivated because reverse engineering is a difficult job to do because of the many 
     limitations of static analysis.  Simply looking at assembly code and attempting to determine what a function does based on 
@@ -30,5 +42,12 @@
     for function matching, BinDiff, could not.  Our proposed matcher attempts to solve the problem of cross architecture 
     comparisons of binaries while also allowing full code coverage. </p>
 
-</body>
+</body>  
+
+<script>
+function loadPage(page) {
+  window.location.href = page;
+
+}
+</script>
 </html>

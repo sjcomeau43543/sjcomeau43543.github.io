@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+
+
+<body>
+<div class="toolbarContainer">
+  <h1 class="header">SAMANTHA COMEAU</h1>
+  <div class="toolbarInnerContainer">
+    <h1 class="toolbar" onclick="loadPage('/index.html')">HOME</h1>
+    <h1 class="toolbar" onclick="loadPage('/projects.html')">PROJECTS</h1>
+    <h1 class="toolbar" onclick="loadPage('/passions.html')">ABOUT</h1>
+  </div>
+</div><br><br>
+
+<div class="mainContainer">
+  <h1 class="header">Optimizing a Home Automation System</h1>
+  <h2 class="header2">DESCRIPTION</h2>
+  <p> IOT devices are abundant and diverse in capability. It is quite possible for a user to own many such devices, and all of which can be co-located on the same local area network. This setup can be thought of as a microcosm for Internet-wide distributed systems. Each individual device is simple and relatively cheap, but the system as a whole is capable of performing complex tasks. </p> 
+  <p> Home automation systems are popular projects for system enthusiasts. We found two such enthusiasts who used Docker containers to improve their own home automation systems. Docker for Home Automation [1] mentions using containers to isolate IOT devices and make it easier to scale up the underlying hardware. Docker Home Assistant [2] also found use for containers in his home automation system as a means to apply security patches and be resilient to device failure. We wanted to extend these ideas to optimize network communication and build a more efficient and easy to use system. </p>
+  <h2 class="header2">ABSTRACT</h2>
+  <p> In this project, we set out to determine if we could improve the reliability, maintainability, and ease-of-use of a home automation system with minimal increase in network traffic with use of a distributed system manager. A home automation system represents, in a literal and tangible way, a distributed system of machines. Our goal was to evaluate and understand a distributed software tool while improving upon a common household system. </p>
+    
+  <p> We studied the open-source manager, Nomad. We found that Nomad improved the reliability of the system by detecting node failures and automatically restarting tasks. Nomad also improved the maintainability of the system with job specification files that encapsulated the logic for our automation tasks and allowed for live updates. However, we found both Nomad and its partner program, Consul, difficult to learn and not well supported with documentation and debugging features. While we eventually overcame this difficulty, we  do not believe that Nomad improved the ease of use for the system. We conclude that Nomad can improve the reliability and maintainability of the system, but that it is too heavy-duty and difficult to use for a typical home automation system. </p>
+
+</body>  
+
+<script>
+function loadPage(page) {
+  window.location.href = page;
+
+}
+</script>
+</html>

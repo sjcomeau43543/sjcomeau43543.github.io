@@ -33,6 +33,10 @@ a {
   cursor: pointer;
 }
 
+p {
+  text-align: justify;
+}
+
 /* TOOLBAR */
 .toolbarContainer {
   margin: auto;
@@ -95,7 +99,7 @@ a {
   margin-bottom: 25px;
 }
 .homeContainer {
-  width: 470px;
+  width: 600px;
   background-color: #99ccff;
   margin: auto;
   padding: 1px 10px;
