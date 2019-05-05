@@ -194,7 +194,22 @@ p {
 .photographyImages {
   float: left;
   margin: 10px;
+  width: 75px;
+  height: 75px;
 
 }
+
+.photographyImages:hover {
+  cursor: pointer;
+
+}
+
+.photographyImageCurrent {
+  width: 400px;
+  margin: auto;
+  margin-left: 200px;
+
+}
+
 
 </style>

@@ -24,17 +24,8 @@
 
   <h2 class="header2">PHOTOGRAPHY</h2>
     <p> I'm just an amateur still... You can find more images from my travels to Australia, the rest of the US, and other places on my Facebook! </p>
-    <div class="photographyImagesContainer">    
-      <img class="photographyImages" style="width: 90px" src="about/aboriginal.jpg">
-      <img class="photographyImages" style="width: 175px" src="about/antelopecanyon2.jpg">
-      <img class="photographyImages" style="width: 200px" src="about/cactus.jpg">
-      <img class="photographyImages" style="width: 200px" src="about/desert.jpg">
-      <img class="photographyImages" style="width: 300px" src="about/horseshoebay.jpg">
-      <img class="photographyImages" style="width: 300px" src="about/rainforst.jpg">
-      <img class="photographyImages" style="width: 300px" src="about/sydney.jpg">
-      <img class="photographyImages" style="width: 200px" src="about/uluru.jpg">
-      <img class="photographyImages" style="width: 200px" src="about/antelopecanyon.jpg">
-    </div>
+    <img class="photographyImageCurrent" id="photographyCurrent" src="about/antelopecanyon2.jpg"></img>
+    <div id="photographyImagesContainer" class="photographyImagesContainer"></div>
 
 
   <h2 class="header2">VOLUNTEERING</h2>
@@ -46,9 +37,24 @@
   
   
 <script>
+var images = ["about/aboriginal.jpg", "about/antelopecanyon2.jpg", "about/rainforst.jpg", "about/cactus.jpg", "about/desert.jpg", "about/horseshoebay.jpg", "about/sydney.jpg", "about/uluru.jpg", "about/antelopecanyon.jpg"];
+
 function loadPage(page) {
   window.location.href = page;
 
 }
+
+function changeImage(newImage) {
+  document.getElementById("photographyCurrent").src = newImage;
+}
+
+function loadImages() {
+  var container = document.getElementById("photographyImagesContainer");
+  for (imagepath in images){
+    container.innerHTML = container.innerHTML + '<img class="photographyImages" onclick="changeImage(\''+images[imagepath]+'\')" src='+images[imagepath]+'></img>';
+  }
+}
+
+loadImages();
 </script>
 </html>
