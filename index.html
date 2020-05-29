@@ -1,101 +1,68 @@
+<!--
+Author:        Samantha
+Last modified: 5.5.2020 by sjc
+Status:        In Progress
+
+TODO: fix design
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/index.css">
-  <title>SJCOMEAU</title>
+    <meta charset="UTF-8">
+
+    <!--styling-->
+    <link rel="stylesheet" href="design/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="design/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="design/bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="design/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="design/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="design/bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
+
+    <!--my styling-->
+    <link rel="stylesheet" href="design/css/index.css">
+    <link rel="stylesheet" href="design/css/copied.css">
+
 </head>
-
-
 <body>
-<div class="toolbarContainer">
-  <h1 class="header">SAMANTHA COMEAU</h1>
-  <div class="toolbarInnerContainer">
-    <h1 class="toolbar" onclick="loadPage('index.html')">HOME</h1>
-    <h1 class="toolbar" onclick="loadPage('projects.html')">PROJECTS</h1>
-    <h1 class="toolbar" onclick="loadPage('passions.html')">ABOUT</h1>
-  </div>
-</div><br><br>
+    <!--JUMBOTRON-->
+    <div class="jumbotron sams-jumbo">
+        <div class="sams-container">
+            <h1 class="display-4 sams-title sams-opaque">chickpea</h1>
+            <p class="lead">Welcome statement</p>
+            <hr class="my-4">
+            <p>Hello! Welcome to my personal website / portfolio. I'm <b>Samantha</b> and I'm currently a graduate student at Worcester Polytechnic Institute studying <b>Computer Science, Computer Security, and Embedded System Design</b>. In my free time I volunteer, do personal projects, and travel.</p>
+        </div>
+    </div>
 
-<div class="mainContainer">
-  <h1 class="header">HOME</h1>
-  <p id="intro">Hello! Welcome to my personal website / portfolio. I'm <b>Samantha</b> and I'm currently a graduate student at Worcester Polytechnic Institute studying <b>Computer Science, Computer Security, and Embedded System Design</b>. In my free time I volunteer, do personal projects, and travel.</p>
+    <!--HEADER-->
+    <div class="sams-header">
+        <div class="container sams-links-container">
+            <!-- TODO links to projects -->
+            <a href="https://www.facebook.com/sam.comeau.12"><img class="sams-links" src='design/images/facebook.png'></a>
+            <a href="https://www.twitter.com/SamComeau1"><img class="sams-links" src='design/images/twitter.png'></a>
+            <a href="https://www.github.com/sjcomeau43543"><img class="sams-links" src='design/images/github.png'></a>
+            <a href="https://www.linkedin.com/in/sjcomeau/"><img class="sams-links" src='design/images/linkedin.png'></a>
+        
+        </div>
+    </div>
 
-  <div class="socialMediaIconsContainer">
-    <a href="https://www.facebook.com/sam.comeau.12"><img class="socialMediaIcons" src='home/facebook.png'></a>
-    <a href="https://www.twitter.com/SamComeau1"><img class="socialMediaIcons" src='home/twitter.png'></a>
-    <a href="https://www.github.com/sjcomeau43543"><img class="socialMediaIcons" src='home/github.png'></a>
-    <a href="https://www.linkedin.com/in/sjcomeau/"><img class="socialMediaIcons" src='home/linkedin.png'></a>
-  </div>
+    <!--MAIN CONTENT-->
+    <div id="pageContainerMain"></div>
 
-  <h1 class="header"><a href="home/sjcomeau_resume.pdf">RESUME</a></h1>
+    <!--FOOTER-->
+    <div class="sams-footer">
+        <div class="container sams-links-container">
+            <!-- links to me -->
+            <a href="https://www.facebook.com/sam.comeau.12"><img class="sams-links" src='design/images/facebook.png'></a>
+            <a href="https://www.twitter.com/SamComeau1"><img class="sams-links" src='design/images/twitter.png'></a>
+            <a href="https://www.github.com/sjcomeau43543"><img class="sams-links" src='design/images/github.png'></a>
+            <a href="https://www.linkedin.com/in/sjcomeau/"><img class="sams-links" src='design/images/linkedin.png'></a>
+        </div>
+    </div>
 
-  <h2 class="header2">EDUCATION</h2>
-
-  <div class="homeContainer">
-    <h3> M.S Computer Science w/ Concentration in Computer Security </h3>
-    <p> Worcester Polytechnic Institute </p>
-    <p> Graduating: May 2020 </p>
-  </div>
-  <div class="homeContainer">
-    <h3> B.S Computer Science / Minor Electrical and Computer Engineering </h3>
-    <p> Worcester Polytechnic Institute </p>
-    <p> Graduated: May 2019 </p>
-  </div>
-
-  <h2 class="header2">EXPERIENCE</h2>
-
-  <div class="homeContainer">
-    <h3> Cyber Intern </h3>
-    <p> MITRE </p>
-    <p> Summer of 2018 </p>
-    <p style="text-align: center;">#reverseengineering #embeddedsystems</p>
-  </div>
-
-  <div class="homeContainer hasLink" onclick="loadPage('projects/SymbolicExecutionForFunctionMatching/index.html')">
-    <h3> Cyber Intern </h3>
-    <p> MITRE </p>
-    <p> Summer of 2017 </p>
-    <p style="text-align: center;">#binaryanalysis #reverseengineering #symbolicexecution</p>
-  </div>
-
-  <div class="homeContainer">
-    <h3> Senior Information Security Assistant </h3>
-    <p> Worcester Polytechnic Institute, Information Security </p>
-    <p> Current </p>
-    <p style="text-align: center;">#penetrationtesting #projectdevelopment #leadership</p>
-  </div>
-  
-  <h2 class="header2">INVOLVEMENT</h2>
-
-  <div class="homeContainer">
-    <h3> WPI SMART </h3>
-    <p> Worcester Polytechnic Institute </p>
-    <p> Founder, President, VP Operations, VP Community Outreach </p>
-  </div>
-
-  <div class="homeContainer">
-    <h3> Alpha Phi International Women's Fraternity </h3>
-    <p> Worcester Polytechnic Institute </p>
-    <p> Director of Target Membership Marketing, Marshall </p>
-  </div>
-
-  <div class="homeContainer">
-    <h3> CyberSecurity Club </h3>
-    <p> Worcester Polytechnic Institute </p>
-  </div>
-
-  <!--<img src='home/ProfessionalPhoto.jpeg'>-->
-
-
-</div>
+    <!--scripts
+    <script src="design/js/index.js"></script>-->
+    <script src="design/js/other.js"></script>
 </body>
-  
-  
-<script>
-function loadPage(page) {
-  window.location.href = page;
-
-}
-</script>
 </html>
