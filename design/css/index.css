@@ -41,6 +41,9 @@
     margin-left: 10px;
     margin-right: 10px;
     opacity: .8;
+    color:black;
+    text-align: center;
+    font-family: Courier, serif;
 }
 .sams-links:hover {
     cursor: pointer;
