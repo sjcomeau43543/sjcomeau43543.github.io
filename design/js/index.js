@@ -37,7 +37,6 @@ loads a page
 */
 function loadPage(url){
     // load content
-    console.log(url);
     var page = document.getElementById("pageContainerMain");
     loadFile(url, function(response) {
         page.innerHTML = response;
