@@ -1,0 +1,61 @@
+/* PROJECTS */
+.projectDiv {
+    background-color: #99ccff;
+    padding: 10px;
+    display: none;
+    margin: 10px;
+    float: left;
+  
+    cursor: pointer;
+    font-size: 8px;
+    
+    width: 225px;
+    height: 225px;
+  }
+  .projectImages {
+    width: 155px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .projectTitles {
+    font-size: 14px;
+    text-align: center;
+  }
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  
+  .myBtnContainer {
+    margin: auto;
+    width: 500px;
+    font-family: Courier, serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .myBtnContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .btn {
+    border: none;
+    outline: none;
+    padding: 6px 8px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    font-size: 12px;
+    float: left;
+    height: 40px;
+  }
+  .btn:hover {
+    background-color: #ddd;
+  }
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+  

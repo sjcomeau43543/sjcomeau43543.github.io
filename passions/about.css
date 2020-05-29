@@ -1,0 +1,43 @@
+/* ABOUT */
+
+#travelPlugin {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+  
+  .photographyImagesContainer {
+    margin: auto;
+    width: 800px;
+    font-family: Courier, serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .photographyImagesContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .photographyImages {
+    float: left;
+    margin: 10px;
+    width: 75px;
+    height: 75px;
+  
+  }
+  
+  .photographyImages:hover {
+    cursor: pointer;
+  
+  }
+  
+  .photographyImageCurrent {
+    width: 400px;
+    margin: auto;
+    margin-left: 200px;
+  
+  }
+  
