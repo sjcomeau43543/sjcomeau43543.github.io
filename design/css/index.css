@@ -14,12 +14,12 @@
   margin-bottom: 10px;
 }
 .sams-jumbo {
-  background: url("../images/moraine-lake-canada.jpg") no-repeat center center;
+  background: url("../images/photography/antelopecanyon2.jpg") no-repeat center center;
   background-size: cover;
 
   width: 100%;
   height: 100%;
-  background-color: #99cfc1;
+  background-color: #98D2EB;
 
   color: white;
   font-family: Verdana, monospace;
@@ -53,6 +53,13 @@
     width: 30px; 
     height: 30px;
 }
+
+.leftcolumn {
+  margin-right: 10px;
+}
+
+
+
 .header {
   margin: auto;
   width: 75%;
@@ -61,13 +68,10 @@
 }
 
 .header2 {
-  margin: auto;
   width: 75%;
   text-align: center;
   font-family: Courier, serif;
   font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .hasLink {
@@ -78,6 +82,12 @@ p {
   text-align: justify;
 }
 
+a {
+  color: black;
+}
 
+a:hover {
+  color: grey;
+}
 
 

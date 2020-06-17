@@ -3,8 +3,6 @@ Author:        Samantha
 Last modified: 5.5.2020 by sjc
 Status:        In progress
 
-TODO
-1. fix old code
 */
 
 var production = false;
@@ -16,9 +14,8 @@ function loadFile(filename, callback) {
     var xobj = new XMLHttpRequest();
 
     xobj.overrideMimeType("application/json");
-     // change to ../../ for local https://sjcomeau43543.githu.io/TravelDome/ bfor online
     if(production) {
-        xobj.open("GET", "https://sjcomeau43543.github.io/TravelDome/"+filename, true);
+        xobj.open("GET", "https://sjcomeau43543.github.io/"+filename, true);
     } else {
         xobj.open("GET", "../../"+filename, true);
     }
@@ -43,54 +40,68 @@ function loadPage(url){
     });
 }
 
-loadPage("home/home.html");
-
-/*/ w3
-
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("projectDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) {
-      w3AddClass(x[i], "show");
-    }
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var mainContainer = document.getElementById("mainContainer");
-var btnContainer = document.getElementsByClassName("myBtnContainer");
-var btns = btnContainer[0].getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-    console.log(this.className);
-  });
-}
+/* 
+----------------------------------------- HOME PAGE
 */
+
+/*
+loadHome
+loads the home page
+*/
+function loadHome(){
+    var container = document.getElementById("homecontainer");
+    var timeout = setInterval(function(){
+        if(container !== null){
+            clearInterval(timeout);
+
+            console.log(container);
+            loadFile("home/resume.json", function(response) {
+                var objects = JSON.parse(response);
+        
+                // create the objects
+                for(var i=0; i<objects.length; i++){
+                    var div = document.createElement("div");
+
+                    div.setAttribute("class", "resumecontainer");
+                    if (objects[i].link !== ""){
+                        div.setAttribute("onclick", "loadpage('"+objects[i].link+"')");
+                    }
+        
+                    var header = document.createElement("h3");
+                    header.setAttribute("class", "resumeh3");
+                    var textnode = document.createTextNode(objects[i].header);
+                    header.appendChild(textnode);
+                    div.appendChild(header);
+        
+                    var location = document.createTextNode(objects[i].location);
+                    div.appendChild(location);
+        
+                    var date = document.createTextNode(objects[i].date);
+                    div.appendChild(document.createElement("br"));
+                    div.appendChild(date);
+        
+                    var tagtext = "";
+                    for(j=0; j<objects[i].tags.length; j++){
+                        tagtext = tagtext + "#" + objects[i].tags[j] + " ";
+                    }
+                    var tags = document.createTextNode(tagtext);
+                    div.appendChild(document.createElement("br"));
+                    div.appendChild(tags);
+                
+                    container.appendChild(div);
+                }
+            });
+        }
+        container = document.getElementById("homecontainer");
+
+        console.log(container);
+    }, 150);
+
+    
+}
+
+/* 
+beginning
+*/
+loadPage("home/home.html");
+loadHome();

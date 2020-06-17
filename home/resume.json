@@ -1,0 +1,72 @@
+[
+    {
+        "header": "M.S Computer Science w/ Concentration in Computer Security",
+        "location": "Worcester Polytechnic Institute",
+        "date": "Graduated: May 2020",
+        "tags": [],
+        "link": ""
+    },
+    {
+        "header": "B.S Computer Science / Minor Electrical and Computer Engineering",
+        "location": "Worcester Polytechnic Institute",
+        "date": "Graduated: May 2019",
+        "tags": [],
+        "link": ""
+    },
+    {
+        "header": "Cyber Intern",
+        "location": "MITRE",
+        "date": "Summer of 2019",
+        "tags": [],
+        "link": ""
+    },
+    {
+        "header": "Cyber Intern",
+        "location": "MITRE",
+        "date": "Summer of 2018",
+        "tags": ["reverseengineering", "embeddedsystems"],
+        "link": ""
+    },
+    {
+        "header": "Cyber Intern",
+        "location": "MITRE",
+        "date": "Summer of 2017",
+        "tags": ["binaryanalysis", "reverseengineering", "symbolicexecution"],
+        "link": "projects/SymbolicExecutionForFunctionMatching/index.html"
+    },
+    {
+        "header": "Senior Information Security Assistant",
+        "location": "Worcester Polytechnic Institute, Information Security",
+        "date": "August 2016-May 2020",
+        "tags": ["penetrationtesting", "projectdevelopment", "leadership"],
+        "link": ""
+    },
+    {
+        "header": "Founder, President, VP Operations, VP Community Outreach",
+        "location": "Worcester Polytechnic Institute, WPI SMART",
+        "date": "",
+        "tags": [],
+        "link": ""
+    },
+    {
+        "header": "Director of Target Membership Marketing, Marshall",
+        "location": "Worcester Polytechnic Institute, Alpha Phi International Women's Fraternity",
+        "date": "",
+        "tags": [],
+        "link": ""
+    },
+    {
+        "header": "Member",
+        "location": "Worcester Polytechnic Institute, CyberSecurity Club",
+        "date": "",
+        "tags": [],
+        "link": ""
+    },
+    {
+        "header": "Member",
+        "location": "Worcester Polytechnic Institute, Scholarship for Service",
+        "date": "",
+        "tags": [],
+        "link": ""
+    }
+]
