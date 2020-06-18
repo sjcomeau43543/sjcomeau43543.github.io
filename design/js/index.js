@@ -5,7 +5,7 @@ Status:        In progress
 
 */
 
-var production = true;
+var production = false;
 /*
 loadFile
 loads files
@@ -39,6 +39,32 @@ function loadPage(url){
         page.innerHTML = response;
     });
 }
+
+/* 
+----------------------------------------- STICKY NAVBAR
+*/
+
+// Get the navbar
+var navbar = document.getElementById("sticky-navbar");
+
+// Get the offset position of the navbar
+var offset = navbar.offsetTop;
+
+/*
+sticky
+sticky navbar
+*/
+function sticky() {
+    if (window.pageYOffset >= offset) {
+        navbar.classList.add("sticky-top")
+    } else {
+        navbar.classList.remove("sticky-top");
+    }
+}
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {sticky()};
+
 
 /* 
 ----------------------------------------- HOME PAGE
@@ -105,3 +131,8 @@ beginning
 */
 loadPage("home/home.html");
 loadHome();
+
+
+/* 
+----------------------------------------- RECIPES PAGE
+*/
