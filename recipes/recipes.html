@@ -5,16 +5,48 @@
         <h1 class="display-4">recipes</h1>
         <p class="lead">accessible vegan recipes</p>
         <hr class="my-4">
-        <p>Welcome to my personal website / portfolio. I'm <b>Samantha</b> and I'm currently a Cyber Operating Systems Security Researcher at MITRE Corporation. I studied <b>Computer Science, Computer Security, and Embedded System Design</b> for both my masters and bachelors degrees at Worcester Polytechnic Institute. This page is dedicated to the projects I do in my free time. From cooking to painting, and even coding (...sometimes) I like to keep myself on my toes learning new things! This site is my way of sharing and accessing these projects.</p>
+        <p>Welcome to the recipes page! Most of these recipes have been adapted from recipes found on pinterest, you can access my inspiration boards here: <a class="whitea" href="https://pinterest.com/samcomeauu/recipes/">recipes</a> and <a class="whitea" href="https://pinterest.com/samcomeauu/recipeapi">recipeapi</a>.</p>
     </div>
 </div>
 
-<h2 class="reg-header2">I WANT TO...</h2>
-<div class="row">
-    <!--FILTERS-->
-    <div class="filter hasLink">SEARCH BY INGREDIENT</div>
-    <div class="filter hasLink">SEARCH BY MACRO</div>
-    <div class="filter hasLink">SEE ORIGINALS</div>
-    <div class="filter hasLink">GET A RANDOM RECIPE</div>
-    <div class="filter hasLink filter-selected">SEE EVERYTHING</div>
+<div class="jumbotron bar bar-autosize">
+    <div class="row box-container">
+        <div class="column small_box">
+            <h3>SEARCH BY INGREDIENT</h3>
+            <hr>
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="search_ingredient">
+            <!--Search bar-->
+        </div>
+        <div class="column small_box">
+            <h3>COMMON SEARCHES</h3>
+            <hr>
+            <div class="row box_container">
+                <div class="button_box haslink" onclick="filter('protein')">
+                    <h4>PROTEIN</h4>
+                </div>
+                <div class="button_box haslink" onclick="filter('easy')">
+                    <h4>EASY</h4>
+                </div>
+                <div class="button_box haslink" onclick="filter('recreation')">
+                    <h4>RECREATIONS</h4>
+                </div>
+            </div>
+        </div>
+        <div class="column small_box haslink" onclick="filter('random')">
+            <h3>GET A RANDOM RECIPE</h3>
+        </div>
+        <div class="column small_box haslink" onclick="filter('reset')">
+            <h3>SEE EVERYTHING</h3>
+        </div>
+
+    </div>
+</div>
+
+<div class="jumbotron bar bar-header">
+    <h2>RECIPES</h2>
+</div>
+
+<div class="jumbotron bar bar-autosize">
+    <div class="row box-container" id="recipes-container">
+    </div>
 </div>

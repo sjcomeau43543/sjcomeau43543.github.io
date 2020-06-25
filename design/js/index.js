@@ -104,7 +104,6 @@ function loadHome(){
                 for(var i=0; i<objects.length; i++){
                     // get container
                     var container = document.getElementById(objects[i].class + "-container");
-                    console.log(container);
 
                     //  div
                     var div = document.createElement("div");
@@ -162,6 +161,35 @@ loadHome();
 ----------------------------------------- RECIPES PAGE
 */
 
+var allrecipes = [];
+var filteredrecipes = [];
+
+
+/*
+createRecipeDiv
+creates a recipe div
+*/
+function createRecipeDiv(recipe) {
+    //  div
+    var div = document.createElement("div");
+    div.setAttribute("class", "column box");
+
+    //tags, category, serves, ingredients {}, instructions []
+
+    // image
+    var image = document.createElement("img");
+    image.setAttribute("src", recipe.photo);
+    div.appendChild(image);
+
+    // title
+    var header = document.createElement("h2");
+    var textnode = document.createTextNode(recipe.title);
+    header.appendChild(textnode);
+    div.appendChild(header);
+
+    return div;
+}
+
 /*
 loadRecipes
 loads the recipes page
@@ -169,9 +197,120 @@ loads the recipes page
 function loadRecipes(){
     loadPage("recipes/recipes.html");
 
-
     // load recipes
+    var container = document.getElementById("recipes-container");
+
+    var timeout = setInterval(function(){
+        if(container !== null){
+            clearInterval(timeout);
+
+            
+            document.getElementById("search_ingredient").addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    filter(document.getElementById("search_ingredient").value);
+                    document.getElementById("search_ingredient").value = "";
+                }
+            });
+
+            loadFile("recipes/recipes.json", function(response) {
+
+                var objects = JSON.parse(response);
+        
+                // create the objects
+                for(var i=0; i<objects.length; i++){
+                    allrecipes.push(objects[i]);
+
+                    var div = createRecipeDiv(objects[i]);
+                
+                    container.appendChild(div);
+
+
+                    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ high protein
+                    for(var j=0; j<objects[i].tags.length; j++){
+                        if(objects[i].tags[j] === "protein"){
+                        }
+                    }
+                }
+
+
+            });
+        }
+        container = document.getElementById("recipes-container");
+    }, 150);
 
     
 }
 
+function filterbytag(tag) {
+    var filtered = [];
+
+    for(var j=0; j<allrecipes.length; j++){
+        for(var k = 0; k<allrecipes[j].tags.length; k++){
+            if(allrecipes[j].tags[k] === tag){
+                filtered.push(allrecipes[j]);
+            }
+        }        
+    }
+
+    return filtered;
+}
+
+function filterbyingredient(ingredient) {
+    var filtered = [];
+
+    for(var j=0; j<allrecipes.length; j++){
+        var ingredients = Object.keys(allrecipes[j].ingredients);
+        
+        for(var k = 0; k<ingredients.length; k++){
+            if(ingredients[k] === ingredient){
+                filtered.push(allrecipes[j]);
+            }
+        }        
+    }
+
+    return filtered;
+
+}
+
+/*
+filter
+filters all recipes
+*/
+function filter(filteringredient){
+    var filteredrecipes = document.getElementById("recipes-container");
+
+    //removeall
+    while (filteredrecipes.firstChild) {
+        filteredrecipes.removeChild(filteredrecipes.firstChild);
+    }
+
+    //random
+    if(filteringredient === "random"){
+        var randomnumber = Math.floor(allrecipes.length * Math.random());
+
+        var randomrecipe = allrecipes[randomnumber];
+
+        var div = createRecipeDiv(randomrecipe);
+        filteredrecipes.appendChild(div);
+    } else if(filteringredient === "reset") {
+        for(var j=0; j<allrecipes.length; j++){
+            var div = createRecipeDiv(allrecipes[j]);
+            filteredrecipes.appendChild(div);
+        }
+    } else if(filteringredient === "protein" || filteringredient === "easy" || filteringredient === "recreation") {
+        var filtered = filterbytag(filteringredient);
+        for(var f=0; f<filtered.length; f++){
+            var div = createRecipeDiv(filtered[f]);
+            filteredrecipes.appendChild(div);
+        }
+
+    } else {
+        var filtered = filterbyingredient(filteringredient);
+
+        for(var f=0; f<filtered.length; f++){
+            var div = createRecipeDiv(filtered[f]);
+            filteredrecipes.appendChild(div);
+        }
+    }
+
+}

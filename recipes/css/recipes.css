@@ -7,3 +7,9 @@ BARS
     background: url("../../design/images/photography/REPLACEME_lemon.jpg") no-repeat center center;
     background-size: cover;
 }
+
+
+#filtered-recipes-container {
+    height: 0px;
+    background-color: black;
+}
