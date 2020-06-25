@@ -5,7 +5,7 @@ Status:        In progress
 
 */
 
-var production = false;
+var production = true;
 /*
 loadFile
 loads files
