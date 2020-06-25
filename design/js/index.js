@@ -29,6 +29,25 @@ function loadFile(filename, callback) {
 }
 
 /*
+loadExterior
+loads exterior page
+*/
+function loadExterior(url, callback){
+    var xobj = new XMLHttpRequest();
+
+    xobj.overrideMimeType("application/json");
+    xobj.open("GET", url, true);
+    xobj.onreadystatechange = function () {
+        if(xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.responseText);
+        }
+
+    };
+    xobj.send(null);
+
+}
+
+/*
 loadPage
 loads a page
 */
@@ -75,12 +94,12 @@ loadHome
 loads the home page
 */
 function loadHome(){
+    loadPage("home/home.html");
+
     var container = document.getElementById("homecontainer");
     var timeout = setInterval(function(){
         if(container !== null){
             clearInterval(timeout);
-
-            console.log(container);
             loadFile("home/resume.json", function(response) {
                 var objects = JSON.parse(response);
         
@@ -119,8 +138,6 @@ function loadHome(){
             });
         }
         container = document.getElementById("homecontainer");
-
-        console.log(container);
     }, 150);
 
     
@@ -129,10 +146,23 @@ function loadHome(){
 /* 
 beginning
 */
-loadPage("home/home.html");
 loadHome();
 
 
 /* 
 ----------------------------------------- RECIPES PAGE
 */
+
+/*
+loadRecipes
+loads the recipes page
+*/
+function loadRecipes(){
+    loadPage("recipes/recipes.html");
+
+
+    // load recipes
+
+    
+}
+

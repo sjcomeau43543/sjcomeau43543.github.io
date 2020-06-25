@@ -4,7 +4,7 @@
   margin: auto;
   padding: 1px 10px;
   margin-bottom: 10px;
-  background-color: rgb(253, 242, 234);
+  background-color: #98D2EB;
   border-radius: 5px;
   
 }
@@ -18,11 +18,4 @@
   text-align: center;
   font-family: Courier, serif;
   font-size: 18px;
-}
-
-.resume {
-  text-align: center;
-  font-family: Courier, serif;
-  font-size: 18px;
-  margin: 10px;
 }

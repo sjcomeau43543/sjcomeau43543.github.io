@@ -21,7 +21,7 @@
 }
 
 .sams-jumbo {
-  background: url("../images/photography/antelopecanyon2.jpg") no-repeat center center;
+  background: url("../images/photography/cake.JPG") no-repeat center center;
   background-size: cover;
 
   width: 100%;
@@ -81,6 +81,14 @@
   font-size: 18px;
 }
 
+.reg-header2 {
+  text-align: center;
+  font-family: Courier, serif;
+  font-size: 18px;
+  padding: 10px;
+  margin: auto;
+}
+
 .hasLink {
   cursor: pointer;
 }
@@ -97,4 +105,20 @@ a:hover {
   color: grey;
 }
 
+/* filters */
+.filter {
+  width: 230px;
+  background-color: #98D2EB;
+  margin: auto;
+  padding: 1px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.filter-selected {
+  background-color: #6c98ab;
+}
 
