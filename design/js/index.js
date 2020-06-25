@@ -64,20 +64,17 @@ function loadPage(url){
 */
 
 // Get the navbar
-var navbar = document.getElementById("sticky-navbar");
-
-// Get the offset position of the navbar
-var offset = navbar.offsetTop;
+var navbar = document.getElementById("navbar-top");
 
 /*
 sticky
 sticky navbar
 */
 function sticky() {
-    if (window.pageYOffset >= offset) {
-        navbar.classList.add("sticky-top")
+    if (window.pageYOffset >= 0) {
+        navbar.classList.add("stick")
     } else {
-        navbar.classList.remove("sticky-top");
+        navbar.classList.remove("stick");
     }
 }
 
@@ -95,8 +92,8 @@ loads the home page
 */
 function loadHome(){
     loadPage("home/home.html");
+    var container = document.getElementById("work-container");
 
-    var container = document.getElementById("homecontainer");
     var timeout = setInterval(function(){
         if(container !== null){
             clearInterval(timeout);
@@ -105,26 +102,38 @@ function loadHome(){
         
                 // create the objects
                 for(var i=0; i<objects.length; i++){
+                    // get container
+                    var container = document.getElementById(objects[i].class + "-container");
+                    console.log(container);
+
+                    //  div
                     var div = document.createElement("div");
 
-                    div.setAttribute("class", "resumecontainer");
+
+                    div.setAttribute("class", "column box");
                     if (objects[i].link !== ""){
                         div.setAttribute("onclick", "loadpage('"+objects[i].link+"')");
                     }
         
-                    var header = document.createElement("h3");
-                    header.setAttribute("class", "resumeh3");
+                    // title
+                    var header = document.createElement("h2");
                     var textnode = document.createTextNode(objects[i].header);
                     header.appendChild(textnode);
                     div.appendChild(header);
         
-                    var location = document.createTextNode(objects[i].location);
-                    div.appendChild(location);
+                    // location
+                    var header = document.createElement("h3");
+                    var textnode = document.createTextNode(objects[i].location);
+                    header.appendChild(textnode);
+                    div.appendChild(header);
         
-                    var date = document.createTextNode(objects[i].date);
-                    div.appendChild(document.createElement("br"));
-                    div.appendChild(date);
+                    // dates
+                    var header = document.createElement("h4");
+                    var textnode = document.createTextNode(objects[i].date);
+                    header.appendChild(textnode);
+                    div.appendChild(header);
         
+                    // tags
                     var tagtext = "";
                     for(j=0; j<objects[i].tags.length; j++){
                         tagtext = tagtext + "#" + objects[i].tags[j] + " ";
@@ -137,7 +146,7 @@ function loadHome(){
                 }
             });
         }
-        container = document.getElementById("homecontainer");
+        container = document.getElementById("work-container");
     }, 150);
 
     

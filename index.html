@@ -10,6 +10,7 @@ TODO: fix design
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>SJCOMEAU</title>
 
     <!--styling-->
     <link rel="stylesheet" href="design/bootstrap-4.3.1-dist/css/bootstrap.css">
@@ -20,29 +21,16 @@ TODO: fix design
     <link rel="stylesheet" href="design/bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
 
     <!--my styling-->
-    <link rel="stylesheet" href="design/css/index.css">
+    <link rel="stylesheet" href="design/css/template.css">
 
 </head>
 <body>
-    <!--JUMBOTRON-->
-    <div class="jumbotron sams-jumbo">
-        <div class="sams-container">
-            <h1 class="display-4 sams-title sams-opaque">chickpea</h1>
-            <p class="lead">Welcome to chickpea, the conglomerate of projects by Samantha Comeau. </p>
-            <hr class="my-4">
-            <p>Welcome to my personal website / portfolio. I'm <b>Samantha</b> and I'm currently a Cyber Operating Systems Security Researcher at MITRE Corporation. I studied <b>Computer Science, Computer Security, and Embedded System Design</b> for both my masters and bachelors degrees at Worcester Polytechnic Institute. This page is dedicated to the projects I do in my free time. From cooking to painting, and even coding (...sometimes) I like to keep myself on my toes learning new things! This site is my way of sharing and accessing these projects.</p>
-        </div>
-    </div>
-
     <!--HEADER-->
-    <div class="sams-header" id="sticky-navbar">
-        <div class="container sams-links-container">
+    <div class="universal-navbar stick" id="navbar-top">
+        <div class="container link-container">
             <!-- TODO links to projects -->
-            <a class="sams-links" onclick="loadHome()">HOME</a>   
-            <a class="sams-links" onclick="loadRecipes()">RECIPES</a>  
-            <!--<a class="sams-links" onclick="loadPage('art/art.html')">ART</a>    
-            <a class="sams-links" onclick="loadPage('travel/travel.html')">TRAVEL</a>   
-            <a class="sams-links" onclick="loadPage('coding/coding.html')">CODING</a> --->   
+            <a class="text-link haslink" onclick="loadHome()">HOME</a>   
+            <a class="text-link haslink" onclick="loadRecipes()">RECIPES</a>  
         </div>
     </div>
 
@@ -50,13 +38,15 @@ TODO: fix design
     <div id="pageContainerMain"></div>
 
     <!--FOOTER-->
-    <div class="sams-footer">
-        <div class="container sams-links-container">
+    <div class="universal-navbar" id="navbar-bottom">
+        <div class="container link-container">
             <!-- links to me -->
-            <a href="https://www.facebook.com/sam.comeau.12"><img class="sams-links" src='design/images/social/facebook.png'></a>
-            <a href="https://www.twitter.com/SamComeau1"><img class="sams-links" src='design/images/social/twitter.png'></a>
-            <a href="https://www.github.com/sjcomeau43543"><img class="sams-links" src='design/images/social/github.png'></a>
-            <a href="https://www.linkedin.com/in/sjcomeau/"><img class="sams-links" src='design/images/social/linkedin.png'></a>
+            <a href="https://www.facebook.com/sam.comeau.12"><img class="img-link" src='design/images/social/facebook.png'></a>
+            <a href="https://www.twitter.com/SamComeau1"><img class="img-link" src='design/images/social/twitter.png'></a>
+            <a href="https://www.github.com/sjcomeau43543"><img class="img-link" src='design/images/social/github.png'></a>
+            <a href="https://www.linkedin.com/in/sjcomeau/"><img class="img-link" src='design/images/social/linkedin.png'></a>
+            <a href="https://www.instagram.com/samcomeauu/"><img class="img-link" src='design/images/social/instagram.png'></a>
+            <a href="https://www.pinterest.com/samcomeauu/"><img class="img-link" src='design/images/social/pinterest.png'></a>
         </div>
     </div>
 
