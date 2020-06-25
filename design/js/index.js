@@ -92,7 +92,7 @@ loads the home page
 */
 function loadHome(){
     loadPage("home/home.html");
-    var container = document.getElementById("work-container");
+    var container = document.getElementById("extracurricular-container");
 
     var timeout = setInterval(function(){
         if(container !== null){
@@ -145,7 +145,7 @@ function loadHome(){
                 }
             });
         }
-        container = document.getElementById("work-container");
+        container = document.getElementById("extracurricular-container");
     }, 150);
 
     
