@@ -5,7 +5,8 @@ Status:        In progress
 
 */
 
-var production = true;
+var production = false;
+
 /*
 loadFile
 loads files
@@ -80,7 +81,6 @@ function sticky() {
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {sticky()};
-
 
 /* 
 ----------------------------------------- HOME PAGE
