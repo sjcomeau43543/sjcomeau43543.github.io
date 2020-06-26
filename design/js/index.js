@@ -152,12 +152,6 @@ function loadHome(){
 }
 
 /* 
-beginning
-*/
-loadHome();
-
-
-/* 
 ----------------------------------------- RECIPES PAGE
 */
 
