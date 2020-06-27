@@ -4,7 +4,6 @@
         "tags": ["recreation"],
         "category": "recipe",
         "photo": "",
-        "serves": "5",
         "ingredients": {"onion": "1 medium",
                         "meat substitute": "1 package",
                         "vegan cheese shreds substitute": "1 handful, optional",
@@ -32,8 +31,18 @@
         "tags": ["recreation", "protein"],
         "category": "recipe",
         "photo": "",
-        "serves": "",
         "ingredients": {"": ""},
+        "instructions": []
+    },    
+    {
+        "title": "quinoa avocado salad",
+        "tags": ["protein"],
+        "category": "recipe",
+        "photo": "",
+        "ingredients": {"quinoa": "1 cup dry",
+                        "grape tomatos": "1 cup",
+                        "avocado": "2 medium",
+                        "pistachios": "3/4 cup, optional"},
         "instructions": []
     }
 ]
