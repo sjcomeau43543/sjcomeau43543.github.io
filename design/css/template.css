@@ -1,11 +1,30 @@
+/* 
+MOBILE
+*/
+@media only screen and (max-width: 1000px) {
+    .column-c {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .box {
+        width: 100%;
+    
+        box-shadow: 0 3px 2px -2px gray;
+        margin: auto;
+        margin-top: 10px;
+        padding: 10px;
+    
+        color: black;
+    }
+}
+
 /*
 NAV BARS
 */
 .right-navbar-container {
-    height: 100vh; /* change */
-    width: 120px;
+    height: 100vh;
     vertical-align: center;
-    background-color: black;
 }
 
 .stick {
@@ -63,29 +82,22 @@ BARS
     text-align: center;
 }
 
+.column-container {
+    width: 100hh;
+}
+
+.column-c {
+    width: 32%;
+    padding: 10px;
+    text-align: center;
+}
+
 .bar-topshadow {
     box-shadow: 0 -4px 2px -2px gray;
 }
 
 .bar-bottomshadow {
     box-shadow: 0 4px 2px -2px gray;
-}
-
-.cover-black {
-    background-color: #000000;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 10px;
-    color: white;
-}
-
-
-.cover-white {
-    background-color: #ffffff;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 10px;
-    color: black;
 }
 
 .box-container {
@@ -178,10 +190,6 @@ IMAGE LINKS TO SOCIAL MEDIA
 IMAGES
 */
 
-#me {
-    border-radius: 5px;
-    height: 300px;
-}
 
 /* 
 LINKS

@@ -74,12 +74,11 @@ sticky
 sticky navbar
 */
 function sticky() {
+    console.log(window.innerWidth);
     if (window.pageYOffset >= offset) {
-        console.log(offset, "fixed");
         navbar.style.top = 0;
         navbar.style.position = "fixed";
     } else {
-        console.log(offset, "absolute");
         navbar.style.top = "auto";
         navbar.style.position = "absolute";
     }
