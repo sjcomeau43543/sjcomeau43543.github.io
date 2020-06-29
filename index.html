@@ -20,23 +20,115 @@ Status:        In Progress
 
     <!--my styling-->
     <link rel="stylesheet" href="design/css/template.css">
+    <link rel="stylesheet" href="home/css/home.css">
+
 
 </head>
 <body onload="loadHome()">
-    <!--HEADER-->
-    <div class="universal-navbar stick" id="navbar-top">
-        <div class="container link-container">
+
+    <!--NAVBAR-->
+    <div class="right-navbar-container accent-back" id="navbar-container">
+        <div class="right-navbar">
             <!-- TODO links to projects -->
-            <a class="text-link haslink" href="home/">HOME</a>   
-            <a class="text-link haslink" href="recipes/">RECIPES</a>  
+            <a class="blacka" href="#home"><div class="right-navbar-button haslink accent-back">HOME </div> </a> 
+            <a class="blacka" href="#about"><div class="right-navbar-button haslink accent-back">ABOUT </div> </a> 
+            <a class="blacka" href="#experience"><div class="right-navbar-button haslink accent-back">EXPERIENCE </div> </a> 
+            <a class="blacka" href="#education"><div class="right-navbar-button haslink accent-back">EDUCATION </div> </a> 
+            <a class="blacka" href="#skills"><div class="right-navbar-button haslink accent-back">SKILLS </div> </a> 
+            <a class="blacka" href="#projects"><div class="right-navbar-button haslink accent-back">PROJECTS </div> </a> 
+            <a class="blacka" href="#contact"><div class="right-navbar-button haslink accent-back">CONTACT </div> </a> 
         </div>
     </div>
 
-    <!--MAIN CONTENT-->
-    <div id="pageContainerMain"></div>
 
-    <!--FOOTER-->
-    <div class="universal-navbar" id="navbar-bottom">
+    <!--HEADER-->
+    <div class="jumbotron bar bar-lg" id="bar-cake">
+        <a name="home"></a>
+        <h1 class="title">sjcomeau</h1>
+        <hr class="my-4">
+    </div>
+
+    <!--ABOUT-->
+    <div class="bar bar-header" id="first-bar">
+        <a name="about"></a>
+        <h1>ABOUT ME</h1>
+    </div>
+
+    <div class="bar bar-autosize">
+        <div class="row box-container rightcolumn">
+            <div class="column box">
+                <img id="me" src="design/images/photography/beachhat.JPG">
+            </div>
+            <div class="column box">
+                <p>Welcome to my personal website / portfolio. I'm <b>Samantha</b> and I'm currently a Cyber Operating Systems Security Researcher at MITRE Corporation. I studied <b>Computer Science, Computer Security, and Embedded System Design</b> for both my masters and bachelors degrees at Worcester Polytechnic Institute. This page is dedicated to the projects I do in my free time. From cooking to painting, and coding (...sometimes) I like to keep myself on my toes learning new things! This site is my way of sharing and accessing these projects.</p>    
+                <div class="link-container">
+                    <img class="logo haslink" src='design/images/logo.png' href="home/sjcomeau_resume.pdf">
+                </div>
+            </div>
+            <div class="column box">
+                <h2>Links to social media</h2>
+                
+                <div class="link-container">
+                    <!-- links to me -->
+                    <a href="https://www.facebook.com/sam.comeau.12"><img class="img-link" src='design/images/social/facebook.png'></a>
+                    <a href="https://www.twitter.com/SamComeau1"><img class="img-link" src='design/images/social/twitter.png'></a>
+                    <a href="https://www.github.com/sjcomeau43543"><img class="img-link" src='design/images/social/github.png'></a>
+                    <a href="https://www.linkedin.com/in/sjcomeau/"><img class="img-link" src='design/images/social/linkedin.png'></a>
+                    <a href="https://www.instagram.com/samcomeauu/"><img class="img-link" src='design/images/social/instagram.png'></a>
+                    <a href="https://www.pinterest.com/samcomeauu/"><img class="img-link" src='design/images/social/pinterest.png'></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--EXPERIENCE-->
+    <div class="bar bar-header">
+        <a name="experience"></a>
+        <h1>EXPERIENCE</h1>
+    </div>
+
+    <div class="bar bar-autosize">
+        <div class="row box-container" id="work-container">
+        </div>
+    </div>
+    
+    <!--EDUCATION-->
+    <div class="bar bar-header">
+        <a name="education"></a>
+        <h1>EDUCATION</h1>
+    </div>
+    
+    <div class="bar bar-autosize">
+        <div class="row box-container" id="education-container">
+        </div>
+    </div>
+    
+    <div class="bar bar-autosize">
+        <div class="row box-container" id="extracurricular-container">
+        </div>
+    </div>
+    
+    <!--SKILLS-->
+    <div class="bar bar-header">
+        <a name="skills"></a>
+        <h1>SKILLS</h1>
+    </div>
+    
+    <div class="bar bar-autosize">
+    </div>
+    
+    <!--PROJECTS-->
+    <div class="bar bar-header">
+        <a name="projects"></a>
+        <h1>PROJECTS</h1>
+    </div>
+    
+    <div class="bar bar-autosize">
+    </div>
+    
+    <!--CONTACT-->
+    <div class="bar bar-autosize bar-topshadow accent-back" id="navbar-bottom">
+        <a name="contact"></a>
         <div class="container link-container">
             <!-- links to me -->
             <a href="https://www.facebook.com/sam.comeau.12"><img class="img-link" src='design/images/social/facebook.png'></a>

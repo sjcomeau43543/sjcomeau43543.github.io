@@ -65,14 +65,14 @@ function loadPage(url){
 */
 
 // Get the navbar
-var navbar = document.getElementById("navbar-top");
+var navbar = document.getElementById("navbar-container");
 
 /*
 sticky
 sticky navbar
 */
 function sticky() {
-    if (window.pageYOffset >= 0) {
+    if (window.pageYOffset >= document.getElementById("first-bar").offsetTop - 150) {
         navbar.classList.add("stick")
     } else {
         navbar.classList.remove("stick");
@@ -91,7 +91,7 @@ loadHome
 loads the home page
 */
 function loadHome(){
-    loadPage("home/home.html");
+    //loadPage("home/home.html");
     var container = document.getElementById("extracurricular-container");
 
     var timeout = setInterval(function(){

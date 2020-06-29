@@ -6,6 +6,7 @@ BARS
 #bar-cake {
     background: url("../../design/images/photography/cake.JPG") no-repeat center center;
     background-size: cover;
+    height: 100vh;
 }
 
 
