@@ -66,21 +66,28 @@ function loadPage(url){
 
 // Get the navbar
 var navbar = document.getElementById("navbar-container");
+var offset = document.getElementById("first-bar").clientHeight;
+offset = window.innerHeight;
 
 /*
 sticky
 sticky navbar
 */
 function sticky() {
-    if (window.pageYOffset >= document.getElementById("first-bar").offsetTop - 150) {
-        navbar.classList.add("stick")
+    if (window.pageYOffset >= offset) {
+        console.log(offset, "fixed");
+        navbar.style.top = 0;
+        navbar.style.position = "fixed";
     } else {
-        navbar.classList.remove("stick");
+        console.log(offset, "absolute");
+        navbar.style.top = "auto";
+        navbar.style.position = "absolute";
     }
 }
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {sticky()};
+sticky();
 
 /* 
 ----------------------------------------- HOME PAGE

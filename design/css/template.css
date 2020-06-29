@@ -2,28 +2,30 @@
 NAV BARS
 */
 .right-navbar-container {
-    height: 100%;
-    line-height: 100%;
-
-    position: fixed;
-
+    height: 100vh; /* change */
+    width: 120px;
     vertical-align: center;
+    background-color: black;
+}
+
+.stick {
+    position: fixed;
+    top: 0;
 }
 
 .right-navbar {
     background-color: white;
     width: 120px;
-    
+    margin-left: 10px;
+
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 10px;
 }
 
 .right-navbar-button {
     height: 50px;
     line-height: 50px;
-    background-color: #E4C5AF;
     
     color:black;
     text-align: center;
@@ -33,13 +35,7 @@ NAV BARS
     color: white;
 }
 
-.stick {
 
-}
-
-.freestand {
-    
-}
 
 /*
 BARS
