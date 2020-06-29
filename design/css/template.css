@@ -1,24 +1,3 @@
-/* 
-MOBILE
-*/
-@media only screen and (max-width: 1000px) {
-    .column-c {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-    }
-    .box {
-        width: 100%;
-    
-        box-shadow: 0 3px 2px -2px gray;
-        margin: auto;
-        margin-top: 10px;
-        padding: 10px;
-    
-        color: black;
-    }
-}
-
 /*
 NAV BARS
 */
@@ -90,6 +69,15 @@ BARS
     width: 32%;
     padding: 10px;
     text-align: center;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .column-c {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
 }
 
 .bar-topshadow {
