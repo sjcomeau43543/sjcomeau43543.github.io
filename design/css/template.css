@@ -27,6 +27,11 @@ NAV BARS
     
     color:black;
     text-align: center;
+
+    font-size: 18px;
+}
+@media only screen and (max-width: 1200px) {
+
 }
 
 .right-navbar-button:hover {
@@ -102,6 +107,11 @@ BARS
 
     color: black;
 }
+@media only screen and (max-width: 1200px) {
+    .box {
+        width: 100%;
+    }
+}
 
 .small_box {
     height: 100px;
@@ -112,6 +122,11 @@ BARS
     margin-top: 10px;
 
     color: black;
+}
+@media only screen and (max-width: 1200px) {
+    .small_box {
+        width: 50%;
+    }
 }
 
 .button_box {
@@ -137,6 +152,11 @@ COLUMNS
 .rightcolumn {
     margin-left: 10px;
 }
+@media only screen and (max-width: 1200px) {
+    .rightcolumn {
+        margin-left: auto;
+    }
+}
 
 /* 
 IMAGE LINKS TO SOCIAL MEDIA
@@ -161,6 +181,13 @@ IMAGE LINKS TO SOCIAL MEDIA
     opacity: .8;
     color:black;
     text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .img-link {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .text-link {
@@ -207,25 +234,60 @@ h1 {
     font-size: 24px;
 }
 
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
 h2 {
     font-size: 22px;
+}
+
+@media only screen and (max-width: 1200px) {
+    h2 {
+        font-size: 38px;
+    }
 }
 
 h3 {
     font-size: 16px;
 }
 
+@media only screen and (max-width: 1200px) {
+    h3 {
+        font-size: 32px;
+    }
+}
+
 h4 {
     font-size: 14px;
 }
 
-body, a {
+@media only screen and (max-width: 1200px) {
+    h4 {
+        font-size: 30px;
+    }
+}
 
+body, a {
+    font-size: 14px;
     font-family: Verdana, monospace;
+}
+@media only screen and (max-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
 }
 
 hr {
     border: 1px solid white;
     border-radius: 5px;
     width: 75%;
+}
+
+@media only screen and (max-width: 1200px) {
+    hr {
+        border: 2px solid white;
+    }
 }

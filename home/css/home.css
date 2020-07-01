@@ -5,11 +5,18 @@
 /*
 BARS
 */
+#header-container {
+    height: 100vh;
+    vertical-align: center;
 
-#bar-cake {
     background: url("../../design/images/photography/cake.JPG") no-repeat center center;
     background-size: cover;
-    height: 100vh;
+}
+
+#bar-cake {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
     color: white;
     text-align: center;
